@@ -86,6 +86,15 @@ copyTemplate year =
     where from = "./aoc_year.hsfiles"
           to = year <> "/aoc_year.hsfiles"
 
+removeTemplate :: String -> IO ()
+removeTemplate year =
+    removeFile $ "./" <> year <> "/aoc_year.hsfiles"
+
+cleanup :: String -> IO ()
+cleanup year = do
+    removeTemplate year
+    return ()
+
 main :: IO ()
 main = do
     dayNumber <- fmap read getLine :: IO Integer
@@ -98,3 +107,5 @@ main = do
 
     sessionId <- getEnv "ADVENT_OF_CODE_SESSION"
     createInputFile year day sessionId
+
+    cleanup year
