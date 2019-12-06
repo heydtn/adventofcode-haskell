@@ -1,19 +1,18 @@
-{-# START_FILE package.yaml #-}
-name:                {{name}}
+name:                day4
 version:             0.1.0.0
-github:              "{{github-username}}{{^github-username}}heydtn{{/github-username}}/{{name}}"
-author:              "{{author-name}}{{^author-name}}Nathaniel Heydt{{/author-name}}"
-maintainer:          "{{author-email}}{{^author-email}}heydtn{{/author-email}}"
-copyright:           "{{copyright}}{{^copyright}}{{year}}{{^year}}2019{{/year}} {{author-name}}{{^author-name}}Nathaniel Heydt{{/author-name}}{{/copyright}}"
+github:              "heydtn/day4"
+author:              "Nathaniel Heydt"
+maintainer:          "heydtn"
+copyright:           "2019 Nathaniel Heydt"
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
-# category:            {{category}}{{^category}}Web{{/category}}
+# category:            Web
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/{{github-username}}{{^github-username}}heydtn{{/github-username}}/adventofcode-haskell/tree/master/2019/{{name}}#readme>
+description:         Please see the README on GitHub at <https://github.com/heydtn/adventofcode-haskell/tree/master/2019/day4#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -22,7 +21,7 @@ dependencies:
 - containers >= 0.6 && < 0.7
 
 executables:
-  {{name}}-exe:
+  day4-exe:
     main:                Main.hs
     source-dirs:         src
     ghc-options:
@@ -30,7 +29,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - {{name}}
+    - day4
 
 default-extensions:
   ApplicativeDo
@@ -67,24 +66,3 @@ default-extensions:
   TypeFamilies
   TypeFamilyDependencies
   TypeOperators
-
-{-# START_FILE .tool_versions #-}
-haskell 8.8.1
-
-{-# START_FILE src/Main.hs #-}
-import Data.Char
-import Data.List
-import Data.Map as M
-import Data.Tree as T
-import Data.Graph.Inductive.Graph as G
-import Control.Monad
-import Control.Applicative
-import Data.Either
-import Text.Parsec (parse)
-import Text.Parsec.String (Parser)
-import Text.Parsec.Char
-import Text.Parsec.Combinator
-
-main = do
-    f <- readFile "{{name}}.input"
-    return ()

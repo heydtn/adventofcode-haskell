@@ -1,0 +1,35 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: bf03b27e912486b37d0e2dba086fdc8139b8edac8db7e4b18fcc5efb650e99d8
+
+name:           day6
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/heydtn/adventofcode-haskell/tree/master/2019/day6#readme>
+homepage:       https://github.com/heydtn/day6#readme
+bug-reports:    https://github.com/heydtn/day6/issues
+author:         Nathaniel Heydt
+maintainer:     heydtn
+copyright:      2019 Nathaniel Heydt
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/heydtn/day6
+
+executable day6-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_day6
+  hs-source-dirs:
+      src
+  default-extensions: ApplicativeDo BangPatterns ConstraintKinds DataKinds DefaultSignatures DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies EmptyCase ExistentialQuantification FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns OverloadedStrings PatternSynonyms RankNTypes ScopedTypeVariables StandaloneDeriving TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , day6
+    , fgl >=5.7 && <6
+  default-language: Haskell2010

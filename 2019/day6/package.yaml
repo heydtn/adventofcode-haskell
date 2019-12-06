@@ -1,0 +1,66 @@
+name:                day6
+version:             0.1.0.0
+github:              "heydtn/day6"
+author:              "Nathaniel Heydt"
+maintainer:          "heydtn"
+copyright:           "2019 Nathaniel Heydt"
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/heydtn/adventofcode-haskell/tree/master/2019/day6#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- fgl >= 5.7 && < 6
+
+executables:
+  day6-exe:
+    main:                Main.hs
+    source-dirs:         src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - day6
+
+default-extensions:
+  ApplicativeDo
+  BangPatterns
+  ConstraintKinds
+  DataKinds
+  DefaultSignatures
+  DeriveFoldable
+  DeriveFunctor
+  DeriveGeneric
+  DeriveLift
+  DeriveTraversable
+  DerivingStrategies
+  EmptyCase
+  ExistentialQuantification
+  FlexibleContexts
+  FlexibleInstances
+  FunctionalDependencies
+  GADTs
+  GeneralizedNewtypeDeriving
+  InstanceSigs
+  KindSignatures
+  LambdaCase
+  MultiParamTypeClasses
+  MultiWayIf
+  NamedFieldPuns
+  OverloadedStrings
+  PatternSynonyms
+  RankNTypes
+  ScopedTypeVariables
+  StandaloneDeriving
+  TupleSections
+  TypeApplications
+  TypeFamilies
+  TypeFamilyDependencies
+  TypeOperators
